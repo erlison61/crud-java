@@ -1,4 +1,4 @@
-package com.mycompany.estudo.jdbc;
+package conexão;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,7 +12,7 @@ public class ConnectionJDBC {
     public ConnectionJDBC() {
         this.driver="org.postgresql.Driver";
         this.severName="localhost";
-        this.myDataBase="test";
+        this.myDataBase="usuario";
         this.root="postgres";
         this.password="post";
         this.urlConnection="jdbc:postgresql://"+this.severName+"/"+this.myDataBase;
@@ -62,8 +62,7 @@ public class ConnectionJDBC {
     
 
     public Connection factoryConnection() throws SQLException, ClassNotFoundException{
-        try{
-            
+        try{ 
            Class.forName(getDriver());
            this.con=DriverManager.getConnection(getUrlConnection(),getRoot(),getPassword());
            return getCon();

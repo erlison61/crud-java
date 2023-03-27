@@ -43,7 +43,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario " +"nome:" + nome + ", idade:" + idade;
+        return "ID:"+id +" Usuario " +" nome:" + nome + ", idade:" + idade;
     }
     
     
